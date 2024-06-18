@@ -8,6 +8,9 @@
         <div>
             <Link :href="`/listing/${listing.id}/edit`">Edit</Link>
         </div>
+        <div>
+            <Link :href="`/listing/${listing.id}`" method="DELETE" as="button">Delete</Link>
+        </div>
     </div>
 </template>
 
@@ -18,4 +21,6 @@ import ListingAddress from '@/Components/ListingAddress.vue';
 defineProps({
     listings: Array,
 });
+
+// const create = () => form.delete('/listing', form)
 </script>
